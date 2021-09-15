@@ -1,0 +1,44 @@
+<template>
+            <!--<lightning-slider label="Number of accounts" size="large" value="0" step="25" max="2000"
+                onchange={handleChangeNumberAcc}></lightning-slider>
+        
+            <lightning-slider label="Pack size" size="large" value="0" step="25" max="200"
+                onchange={handleChangePackSize}></lightning-slider>
+                <div class="slds-grid_vertical">
+        <div class="slds-grid_vertical slds-m-top_medium slds-m-bottom_medium slds-align_absolute-center">
+            <lightning-button label="Start" variant="brand" onclick={createRecords}></lightning-button>
+        </div>
+        <div style="margin-left: 2%; margin-right: 2%" class="slds-col">
+            <template if:true={jobPercentage}>
+                <lightning-progress-bar value={jobPercentage} variant="circular"></lightning-progress-bar>
+            </template>
+        </div>
+    </div>-->
+
+
+
+<table class="slds-table slds-table_header-hidden">
+
+    <tbody>
+        <tr class="slds-hint-parent">
+            <td>
+                <lightning-slider label="Number of accounts" size="large" value="0" step="25" max="2000"
+                onchange={handleChangeNumberAcc}></lightning-slider>            </td>
+            <td>
+                <lightning-slider label="Pack size" size="large" value="0" step="25" max="200"
+                onchange={handleChangePackSize}></lightning-slider>            </td>
+            <td>
+                <lightning-button-group>
+                    <lightning-button label="Start" variant="brand" icon-name="utility:add" onclick={createRecords}></lightning-button>
+                    <lightning-button label="Delete" variant="destructive" icon-name="utility:delete" onclick={deleteRecords}></lightning-button>
+                </lightning-button-group>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<template if:true={jobPercentage}>
+    <lightning-progress-bar value={jobPercentage} variant="circular"></lightning-progress-bar>
+</template>
+
+
+</template>

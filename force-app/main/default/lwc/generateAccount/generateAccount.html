@@ -1,0 +1,9 @@
+<template>
+        <lightning-slider label="Number of accounts" size="medium" value="0" step="25" max="6000" onchange={handleChangeNumberAcc}></lightning-slider>
+        <lightning-slider label="Pack size" size="medium" value="0" step="25" max="200" onchange={handleChangePackSize}></lightning-slider>
+
+
+
+        <lightning-progress-bar value={jobPercentage} size="large" variant="circular"></lightning-progress-bar>
+        <lightning-button label="Start" variant="brand" onclick={viewProgressTracker} class="my-brand"></lightning-button>
+</template>
