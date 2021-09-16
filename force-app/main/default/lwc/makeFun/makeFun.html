@@ -1,0 +1,40 @@
+<template>
+
+    <div class="slds-grid slds-wrap">
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+            <span>
+                <lightning-slider label="Number of accounts" size="large" value="0" step="25" max="2000"
+                    onchange={handleChangeNumberAcc}></lightning-slider>
+            </span>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-align_absolute-center">
+            <span>
+                <lightning-slider label="Pack size" size="large" value="0" step="25" max="200"
+                    onchange={handleChangePackSize}></lightning-slider>
+            </span>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+            <span>
+                <lightning-button-group>
+                    <lightning-button label="Start" variant="brand" icon-name="utility:add" onclick={createRecords}>
+                    </lightning-button>
+                    <lightning-button label="Delete" variant="destructive" disabled={activeDeleteButton}
+                        icon-name="utility:delete" onclick={deleteRecords}></lightning-button>
+                </lightning-button-group>
+            </span>
+        </div>
+
+        <div class="slds-col slds-size_1-of-1 slds-text-align_center slds-m-top_small">
+            <span>
+                <template if:true={jobPercentage}>
+                    <lightning-progress-bar value={jobPercentage} variant="circular"></lightning-progress-bar>
+                </template>
+            </span>
+        </div>
+
+    </div>
+
+</template>
