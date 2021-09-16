@@ -1,2 +1,2 @@
 # GenerateAccount
-Create and Delete Account with Batch&amp;Progress Bar
+Create and Delete Account with Batch&amp;Progress Bar LWC
